@@ -1,0 +1,6 @@
+@Santander.BestHackerStories.API_HostAddress = http://localhost:5047
+
+GET {{Santander.BestHackerStories.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
