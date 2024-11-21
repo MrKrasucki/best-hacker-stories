@@ -29,6 +29,12 @@ dotnet run
 
 Note: please wait until initial feed completes.
 
+### Run the integration tests
+```bash
+cd best-hacker-stories\tests\Santander.BestHackerStories.IntegrationTests
+dotnet test
+```
+
 ## Assumptions
 
 I assumed that performance is more important than getting real-time data. That's why I chose to get data once in 5 minutes intervals instead of fetching them on every request.
