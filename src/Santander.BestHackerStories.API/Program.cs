@@ -1,4 +1,15 @@
+using Microsoft.AspNetCore.Mvc;
+using Santander.BestHackerStories.API;
+using Santander.BestHackerStories.API.Workers;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddHttpClient(Constants.HackerNewsApiClient, httpClient => {
+    httpClient.BaseAddress = builder.Configuration.GetValue<Uri>("HackerNewsApi:BaseUri");
+});
+
+builder.Services.AddSingleton<IHackerNewsApiClient, HackerNewsApiClient>();
+builder.Services.AddHostedService<HackerNewsFeeder>();
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -16,29 +27,10 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
+app.MapGet("/hacker-news-details", ([FromQuery] int storyCount) => {
+    return HackerNewsStore.GetBestStories().Take(storyCount).ToList();
 })
-.WithName("GetWeatherForecast")
+.WithName("GetHackerNewsDetails")
 .WithOpenApi();
 
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
