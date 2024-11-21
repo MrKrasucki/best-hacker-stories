@@ -27,10 +27,12 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapGet("/hacker-news-details", ([FromQuery] int storyCount) => {
-    return HackerNewsStore.GetBestStories().Take(storyCount).ToList();
+app.MapGet("/best-stories", ([FromQuery] int? storyCount) => {
+    return HackerNewsStore.GetBestStories().Take(storyCount ?? 10).ToList();
 })
-.WithName("GetHackerNewsDetails")
+.WithName("GetBestHackerStories")
 .WithOpenApi();
 
 app.Run();
+
+public partial class Program { }

@@ -38,7 +38,7 @@ Fetching data takes 30 seconds on my machine in Release mode. We need to take un
 
 Given the time I could work on multiple aspects of the application. I could:
 - refactor HackerNewsStore using System.Reactive library as a Subject
-- add more Unit Tests and Integrations Tests
+- add more Unit, Integration and Contract Tests
 - try and use Firebase libraries. Hacker News API documentation says that I could listen to changes instead of polling data
 - add a rate limiter so the API is not DDoS-ed
 - add a health check for seeing how many times feeder executed
