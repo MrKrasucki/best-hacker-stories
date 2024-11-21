@@ -27,6 +27,8 @@ dotnet build
 dotnet run
 ```
 
+[Swagger UI](http://localhost:5047/swagger/index.html)
+
 Note: please wait until initial feed completes.
 
 ### Run the integration tests
