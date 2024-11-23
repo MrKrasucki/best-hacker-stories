@@ -1,9 +1,9 @@
 using System.Net;
 using System.Net.Http.Json;
 using Microsoft.AspNetCore.Mvc.Testing;
-using Santander.BestHackerStories.API.Contracts;
+using BestHackerStories.API.Contracts;
 
-namespace Santander.BestHackerStories.IntegrationTests;
+namespace BestHackerStories.IntegrationTests;
 
 public class BestStoriesIntegrationWithFeedTests : IClassFixture<WebApplicationFactory<Program>>
 {

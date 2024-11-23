@@ -1,6 +1,6 @@
 using System;
 
-namespace Santander.BestHackerStories.API;
+namespace BestHackerStories.API;
 
 public static class Constants
 {

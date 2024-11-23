@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Santander.BestHackerStories.API\Santander.BestHackerStories.API.csproj" />
+    <ProjectReference Include="..\..\src\BestHackerStories.API\BestHackerStories.API.csproj" />
   </ItemGroup>
 
   <ItemGroup>

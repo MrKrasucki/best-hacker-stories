@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using Santander.BestHackerStories.API;
-using Santander.BestHackerStories.API.Workers;
+using BestHackerStories.API;
+using BestHackerStories.API.Workers;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -1,7 +1,7 @@
 using System.Diagnostics;
-using Santander.BestHackerStories.API.Contracts;
+using BestHackerStories.API.Contracts;
 
-namespace Santander.BestHackerStories.API.Workers;
+namespace BestHackerStories.API.Workers;
 
 public class HackerNewsFeeder : BackgroundService
 {

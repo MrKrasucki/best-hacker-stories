@@ -1,7 +1,7 @@
 using System;
-using Santander.BestHackerStories.API.Contracts;
+using BestHackerStories.API.Contracts;
 
-namespace Santander.BestHackerStories.API;
+namespace BestHackerStories.API;
 
 public static class HackerNewsStore
 {

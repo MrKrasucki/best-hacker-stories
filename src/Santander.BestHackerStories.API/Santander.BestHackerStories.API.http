@@ -1,6 +1,0 @@
-@Santander.BestHackerStories.API_HostAddress = http://localhost:5047
-
-GET {{Santander.BestHackerStories.API_HostAddress}}/best-stories/
-Accept: application/json
-
-###

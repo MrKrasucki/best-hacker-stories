@@ -18,7 +18,7 @@ Make sure you have the following installed:
 ### Clone the Repository
 ```bash
 git clone https://github.com/MrKrasucki/best-hacker-stories.git
-cd best-hacker-stories\src\Santander.BestHackerStories.API
+cd best-hacker-stories\src\BestHackerStories.API
 ```
 
 ### Run the solution
@@ -33,7 +33,7 @@ Note: please wait until initial feed completes.
 
 ### Run the integration tests
 ```bash
-cd best-hacker-stories\tests\Santander.BestHackerStories.IntegrationTests
+cd best-hacker-stories\tests\BestHackerStories.IntegrationTests
 dotnet test
 ```
 

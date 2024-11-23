@@ -1,6 +1,6 @@
 using System;
 
-namespace Santander.BestHackerStories.API.Contracts;
+namespace BestHackerStories.API.Contracts;
 
 public static class Converters
 {
